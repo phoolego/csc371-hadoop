@@ -28,7 +28,7 @@ public class MapReduce {
             }
             for (int i = 0 ; i < persons.size();i++){
                 String[] temp = persons.get(i).split(",");
-                if(temp.length >= 4 && temp[4].equals("04") && temp.length >= 98 && !temp[98].equals("")){
+                if(temp.length > 4 && temp[4].equals("04") && temp.length > 98 && !temp[98].equals("")){
                     System.out.println(temp[98]);
                     person.set(temp[98]);
                     context.write(person, one);
